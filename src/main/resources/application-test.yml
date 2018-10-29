@@ -2,8 +2,33 @@ server:
   port: 8756
 spring:
   datasource:
-    url: jdbc:mysql://192.168.31.58:3306/lx?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://47.106.77.86:3306/store?useUnicode=true&characterEncoding=UTF-8
     username: root
     password: MiSS*+520
     driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  redis:
+    host: 47.106.77.86
+    port: 6379
+    password: redispass
+  data:
+    mongodb:
+      uri: mongodb://47.106.77.86:27017/store
+      username: snh
+      password: mongodb
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    suffix: .html
+    prefix: classpath:/templates/
+  mail:
+    host: smtp.aliyun.com
+    port: 465
+    username: snhblog@aliyun.com
+    password: MiSS*+120
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
 
